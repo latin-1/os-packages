@@ -1,0 +1,45 @@
+From ae1303ef6e2ca46557cdfb942b184137139b20e7 Mon Sep 17 00:00:00 2001
+From: Bard Liao <yung-chuan.liao@linux.intel.com>
+Date: Wed, 3 Jun 2026 09:50:30 +0800
+Subject: [PATCH 4/5] ASoC: SOF: Intel: Use codec_info_list.is_amp directly
+
+Now we set is_amp to all amp type codecs. We can use the flag directly
+instead of using a local flag to check if the codec is an AMP type.
+
+Signed-off-by: Bard Liao <yung-chuan.liao@linux.intel.com>
+---
+ sound/soc/sof/intel/hda.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/sound/soc/sof/intel/hda.c b/sound/soc/sof/intel/hda.c
+index 5fa773bb2..46a6c63fc 100644
+--- a/sound/soc/sof/intel/hda.c
++++ b/sound/soc/sof/intel/hda.c
+@@ -1159,7 +1159,6 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
+ 	struct snd_soc_acpi_adr_device *adr_dev;
+ 	const char *name_prefix = "";
+ 	int index = link->num_adr;
+-	bool is_amp = true; /* Set it to false if the codec wiah any NON-AMP DAI type */
+ 	int ep_index = 0;
+ 	int i, j;
+ 
+@@ -1213,7 +1212,6 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
+ 				endpoints[ep_index].aggregated = 0;
+ 				endpoints[ep_index].group_id = 0;
+ 				endpoints[ep_index].group_position = 0;
+-				is_amp = false;
+ 			}
+ 			ep_index++;
+ 		}
+@@ -1234,7 +1232,7 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
+ 			((u64)(sdw_device->id.sdw_version & 0xF) << 44) |
+ 			((u64)(sdw_device->bus->link_id & 0xF) << 48);
+ 
+-	if (!is_amp) {
++	if (!codec_info_list[i].is_amp) {
+ 		/* For non-amp codecs, get name_prefix from codec_info_list[] */
+ 		adr_dev[index].name_prefix = devm_kasprintf(dev, GFP_KERNEL, "%s", name_prefix);
+ 		goto done_name_prefix;
+-- 
+2.54.0
+
