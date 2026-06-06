@@ -1,4 +1,5 @@
 Name: adobe-source-han-sans
+Summary: Source Han Sans
 Version: 2.005
 Release: 1%{?dist}
 License: OFL-1.1-RFN
@@ -11,8 +12,10 @@ Source1: https://github.com/adobe-fonts/source-han-sans/releases/download/%{vers
 Source10: https://raw.githubusercontent.com/adobe-fonts/source-han-sans/refs/tags/%{version}/LICENSE.txt
 
 %package fonts
+Summary: Source Han Sans
 
 %package vf-fonts
+Summary: Source Han Sans - Variable
 
 %prep
 %setup -q -c -T

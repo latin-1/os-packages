@@ -1,4 +1,5 @@
 Name: adobe-source-han-serif
+Summary: Source Han Serif
 Version: 2.005
 Release: 1%{?dist}
 License: OFL-1.1-RFN
@@ -11,8 +12,10 @@ Source1: https://github.com/adobe-fonts/source-han-serif/releases/download/%{ver
 Source10: https://raw.githubusercontent.com/adobe-fonts/source-han-serif/refs/tags/%{version}/LICENSE.txt
 
 %package fonts
+Summary: Source Han Serif
 
 %package vf-fonts
+Summary: Source Han Serif - Variable
 
 %prep
 %setup -q -c -T
