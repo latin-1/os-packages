@@ -1,7 +1,7 @@
 From e4cff8357e9a1c191d3af871ac692e40e9afb51d Mon Sep 17 00:00:00 2001
 From: Zeyu WANG <zeyu.thomas.wang@gmail.com>
 Date: Wed, 3 Jun 2026 01:09:09 +0800
-Subject: [PATCH 1/5] Input: atkbd - add DMI quirk for Lenovo Yoga Air 14
+Subject: [PATCH 1/7] Input: atkbd - add DMI quirk for Lenovo Yoga Air 14
  (83QK)
 
 The Lenovo Yoga Air 14 (83QK) laptop keyboard becomes unresponsive

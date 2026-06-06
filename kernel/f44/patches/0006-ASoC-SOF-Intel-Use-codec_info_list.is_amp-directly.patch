@@ -1,7 +1,7 @@
-From ae1303ef6e2ca46557cdfb942b184137139b20e7 Mon Sep 17 00:00:00 2001
+From c368c6fed7397f527bfd3dc8fc1216390e8e6272 Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Wed, 3 Jun 2026 09:50:30 +0800
-Subject: [PATCH 4/5] ASoC: SOF: Intel: Use codec_info_list.is_amp directly
+Subject: [PATCH 6/7] ASoC: SOF: Intel: Use codec_info_list.is_amp directly
 
 Now we set is_amp to all amp type codecs. We can use the flag directly
 instead of using a local flag to check if the codec is an AMP type.
@@ -12,7 +12,7 @@ Signed-off-by: Bard Liao <yung-chuan.liao@linux.intel.com>
  1 file changed, 1 insertion(+), 3 deletions(-)
 
 diff --git a/sound/soc/sof/intel/hda.c b/sound/soc/sof/intel/hda.c
-index 5fa773bb2..46a6c63fc 100644
+index a1a723c47..c9d07ad87 100644
 --- a/sound/soc/sof/intel/hda.c
 +++ b/sound/soc/sof/intel/hda.c
 @@ -1159,7 +1159,6 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
@@ -31,7 +31,7 @@ index 5fa773bb2..46a6c63fc 100644
  			}
  			ep_index++;
  		}
-@@ -1234,7 +1232,7 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
+@@ -1244,7 +1242,7 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
  			((u64)(sdw_device->id.sdw_version & 0xF) << 44) |
  			((u64)(sdw_device->bus->link_id & 0xF) << 48);
  

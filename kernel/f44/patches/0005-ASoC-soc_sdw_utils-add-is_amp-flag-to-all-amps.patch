@@ -1,7 +1,7 @@
-From 8861613bb0bda566ee55e996fe9b6c29df3cd92d Mon Sep 17 00:00:00 2001
+From 2b06cc187980b95b3d5e3c041545936d4ddb73b8 Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Wed, 3 Jun 2026 09:10:52 +0800
-Subject: [PATCH 3/5] ASoC: soc_sdw_utils: add is_amp flag to all amps
+Subject: [PATCH 5/7] ASoC: soc_sdw_utils: add is_amp flag to all amps
 
 The is_amp flag will be used for the codec name_prefix.
 We detect it by checking if the codec support endpoints other than amp.
@@ -17,7 +17,7 @@ Signed-off-by: Bard Liao <yung-chuan.liao@linux.intel.com>
  1 file changed, 10 insertions(+)
 
 diff --git a/sound/soc/sdw_utils/soc_sdw_utils.c b/sound/soc/sdw_utils/soc_sdw_utils.c
-index 1b897c8c2..ad2075675 100644
+index 55b05e197..ddcf7bbb8 100644
 --- a/sound/soc/sdw_utils/soc_sdw_utils.c
 +++ b/sound/soc/sdw_utils/soc_sdw_utils.c
 @@ -75,6 +75,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
@@ -52,7 +52,7 @@ index 1b897c8c2..ad2075675 100644
  		.dais = {
  			{
  				.direction = {true, true},
-@@ -519,6 +523,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
+@@ -541,6 +545,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
  	{
  		.part_id = 0x8373,
  		.name_prefix = "Left",
@@ -60,7 +60,7 @@ index 1b897c8c2..ad2075675 100644
  		.dais = {
  			{
  				.direction = {true, true},
-@@ -539,6 +544,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
+@@ -561,6 +566,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
  	{
  		.part_id = 0x8363,
  		.name_prefix = "Left",
@@ -68,7 +68,7 @@ index 1b897c8c2..ad2075675 100644
  		.dais = {
  			{
  				.direction = {true, false},
-@@ -577,6 +583,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
+@@ -599,6 +605,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
  	{
  		.part_id = 0x3556,
  		.name_prefix = "AMP",
@@ -76,7 +76,7 @@ index 1b897c8c2..ad2075675 100644
  		.dais = {
  			{
  				.direction = {true, false},
-@@ -604,6 +611,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
+@@ -626,6 +633,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
  	{
  		.part_id = 0x3557,
  		.name_prefix = "AMP",
@@ -84,7 +84,7 @@ index 1b897c8c2..ad2075675 100644
  		.dais = {
  			{
  				.direction = {true, false},
-@@ -631,6 +639,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
+@@ -653,6 +661,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
  	{
  		.part_id = 0x3563,
  		.name_prefix = "AMP",
@@ -92,7 +92,7 @@ index 1b897c8c2..ad2075675 100644
  		.dais = {
  			{
  				.direction = {true, false},
-@@ -807,6 +816,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
+@@ -829,6 +838,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {
  	{
  		.part_id = 0x55aa, /* amplifier mockup */
  		.name_prefix = "sdw_mockup_amp1",
