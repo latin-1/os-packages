@@ -6,7 +6,7 @@ source ./version
 
 fedpkg clone --anonymous --branch "$BRANCH" kernel
 cd kernel
-git switch "$COMMIT"
+git switch --detach "$COMMIT"
 
 fedpkg sources
 
