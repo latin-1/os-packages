@@ -11,11 +11,18 @@ Source0: https://github.com/adobe-fonts/source-han-sans/releases/download/%{vers
 Source1: https://github.com/adobe-fonts/source-han-sans/releases/download/%{version}R/02_SourceHanSans-VF.zip
 Source10: https://raw.githubusercontent.com/adobe-fonts/source-han-sans/refs/tags/%{version}/LICENSE.txt
 
+%description
+Source Han Sans
+
 %package fonts
 Summary: Source Han Sans
+%description fonts
+Source Han Sans
 
 %package vf-fonts
 Summary: Source Han Sans - Variable
+%description vf-fonts
+Source Han Sans - Variable
 
 %prep
 %setup -q -c -T

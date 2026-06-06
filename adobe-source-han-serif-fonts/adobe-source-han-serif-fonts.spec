@@ -11,11 +11,18 @@ Source0: https://github.com/adobe-fonts/source-han-serif/releases/download/%{ver
 Source1: https://github.com/adobe-fonts/source-han-serif/releases/download/%{version}R/02_SourceHanSerif-VF.zip
 Source10: https://raw.githubusercontent.com/adobe-fonts/source-han-serif/refs/tags/%{version}/LICENSE.txt
 
+%description
+Source Han Serif
+
 %package fonts
 Summary: Source Han Serif
+%description fonts
+Source Han Serif
 
 %package vf-fonts
 Summary: Source Han Serif - Variable
+%description vf-fonts
+Source Han Serif - Variable
 
 %prep
 %setup -q -c -T
