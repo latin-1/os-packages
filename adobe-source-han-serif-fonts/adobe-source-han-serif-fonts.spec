@@ -1,6 +1,6 @@
 Name: adobe-source-han-serif
 Summary: Source Han Serif
-Version: 2.005
+Version: 2.003
 Release: 1%{?dist}
 License: OFL-1.1-RFN
 
