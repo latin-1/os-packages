@@ -1,7 +1,7 @@
-From e4cff8357e9a1c191d3af871ac692e40e9afb51d Mon Sep 17 00:00:00 2001
+From 618e3602eaa9c315238d44843c93033be5573c9f Mon Sep 17 00:00:00 2001
 From: Zeyu WANG <zeyu.thomas.wang@gmail.com>
 Date: Wed, 3 Jun 2026 01:09:09 +0800
-Subject: [PATCH 1/7] Input: atkbd - add DMI quirk for Lenovo Yoga Air 14
+Subject: [PATCH 01/11] Input: atkbd - add DMI quirk for Lenovo Yoga Air 14
  (83QK)
 
 The Lenovo Yoga Air 14 (83QK) laptop keyboard becomes unresponsive
@@ -22,12 +22,16 @@ entries for LG Electronics and HONOR FMB-P that address the
 same EC F5 deactivate issue.
 
 Signed-off-by: Zeyu WANG <zeyu.thomas.wang@gmail.com>
+Link: https://patch.msgid.link/20260602170909.14725-1-zeyu.thomas.wang@gmail.com
+Cc: stable@vger.kernel.org
+Signed-off-by: Dmitry Torokhov <dmitry.torokhov@gmail.com>
+(cherry picked from commit ad0979fe053e9f2db82da82188256ef6eb41095a)
 ---
  drivers/input/keyboard/atkbd.c | 8 ++++++++
  1 file changed, 8 insertions(+)
 
 diff --git a/drivers/input/keyboard/atkbd.c b/drivers/input/keyboard/atkbd.c
-index 840cdf587..8d7c55212 100644
+index 840cdf5878dc..8d7c55212dff 100644
 --- a/drivers/input/keyboard/atkbd.c
 +++ b/drivers/input/keyboard/atkbd.c
 @@ -1944,6 +1944,14 @@ static const struct dmi_system_id atkbd_dmi_quirk_table[] __initconst = {

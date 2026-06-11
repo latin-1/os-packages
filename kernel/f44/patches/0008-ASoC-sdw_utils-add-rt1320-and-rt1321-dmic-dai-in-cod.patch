@@ -1,7 +1,7 @@
-From 1f9c18e593a67443841f8b2c1f62817e33e77aac Mon Sep 17 00:00:00 2001
+From 34d7604fe293c1b9b71ad4cb7ebeb23b073db6bf Mon Sep 17 00:00:00 2001
 From: Derek Fang <derek.fang@realtek.com>
 Date: Thu, 26 Mar 2026 15:53:02 +0800
-Subject: [PATCH 4/7] ASoC: sdw_utils: add rt1320 and rt1321 dmic dai in
+Subject: [PATCH 08/11] ASoC: sdw_utils: add rt1320 and rt1321 dmic dai in
  codec_info_list
 
 Add 'rt1320-aif2' dai infos for rt1320 and rt1321 dmic function.
@@ -10,13 +10,14 @@ Signed-off-by: Derek Fang <derek.fang@realtek.com>
 Signed-off-by: Bard Liao <yung-chuan.liao@linux.intel.com>
 Link: https://patch.msgid.link/20260326075303.1083567-4-yung-chuan.liao@linux.intel.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
+(cherry picked from commit ae2cb3384337a556ce02e557fecd39db78c36e7d)
 ---
  sound/soc/sdw_utils/soc_sdw_rt_dmic.c | 46 +++++++++++++++++++++++++--
  sound/soc/sdw_utils/soc_sdw_utils.c   | 26 +++++++++++++--
  2 files changed, 67 insertions(+), 5 deletions(-)
 
 diff --git a/sound/soc/sdw_utils/soc_sdw_rt_dmic.c b/sound/soc/sdw_utils/soc_sdw_rt_dmic.c
-index 97be110a5..fed85bad9 100644
+index 97be110a59b6..fed85bad9e88 100644
 --- a/sound/soc/sdw_utils/soc_sdw_rt_dmic.c
 +++ b/sound/soc/sdw_utils/soc_sdw_rt_dmic.c
 @@ -9,15 +9,20 @@
@@ -89,7 +90,7 @@ index 97be110a5..fed85bad9 100644
  		return -ENOMEM;
  
 diff --git a/sound/soc/sdw_utils/soc_sdw_utils.c b/sound/soc/sdw_utils/soc_sdw_utils.c
-index 1b897c8c2..55b05e197 100644
+index 1b897c8c2c2c..55b05e197a13 100644
 --- a/sound/soc/sdw_utils/soc_sdw_utils.c
 +++ b/sound/soc/sdw_utils/soc_sdw_utils.c
 @@ -321,6 +321,7 @@ struct asoc_sdw_codec_info codec_info_list[] = {

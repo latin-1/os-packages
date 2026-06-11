@@ -1,18 +1,26 @@
-From e47f7b75b59116ec366b36d647273e9d2de2ef99 Mon Sep 17 00:00:00 2001
+From e4120ad98367253560e0a03f90d455210c3844bf Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
-Date: Wed, 3 Jun 2026 09:50:30 +0800
-Subject: [PATCH 6/7] ASoC: SOF: Intel: Use codec_info_list.is_amp directly
+Date: Fri, 5 Jun 2026 18:18:05 +0800
+Subject: [PATCH 10/11] ASoC: SOF: Intel: Use codec_info_list.is_amp directly
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 
 Now we set is_amp to all amp type codecs. We can use the flag directly
 instead of using a local flag to check if the codec is an AMP type.
 
 Signed-off-by: Bard Liao <yung-chuan.liao@linux.intel.com>
+Reviewed-by: Péter Ujfalusi <peter.ujfalusi@linux.intel.com>
+Reviewed-by: Charles Keepax <ckeepax@opensource.cirrus.com>
+Link: https://patch.msgid.link/20260605101805.121428-3-yung-chuan.liao@linux.intel.com
+Signed-off-by: Mark Brown <broonie@kernel.org>
+(cherry picked from commit 0305c084acf2ba9465acf6b5816bea441fe08b58)
 ---
  sound/soc/sof/intel/hda.c | 14 +-------------
  1 file changed, 1 insertion(+), 13 deletions(-)
 
 diff --git a/sound/soc/sof/intel/hda.c b/sound/soc/sof/intel/hda.c
-index a1a723c47..46a6c63fc 100644
+index a1a723c47129..46a6c63fc7c9 100644
 --- a/sound/soc/sof/intel/hda.c
 +++ b/sound/soc/sof/intel/hda.c
 @@ -1159,7 +1159,6 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,

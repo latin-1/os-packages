@@ -1,8 +1,8 @@
-From b8178968538a8128fbac0b67b9640d10f3404b22 Mon Sep 17 00:00:00 2001
+From 2c1f123f5bb19b974272076d8599c52002584965 Mon Sep 17 00:00:00 2001
 From: Derek Fang <derek.fang@realtek.com>
 Date: Thu, 26 Mar 2026 15:53:01 +0800
-Subject: [PATCH 3/7] ASoC: SOF: Intel: Add a is_amp flag to fix the wrong name
- prefix
+Subject: [PATCH 07/11] ASoC: SOF: Intel: Add a is_amp flag to fix the wrong
+ name prefix
 
 According to the Intel sof design, it will create the name prefix
 appended with amp index for the amp codec only, such as:
@@ -17,13 +17,14 @@ Signed-off-by: Derek Fang <derek.fang@realtek.com>
 Signed-off-by: Bard Liao <yung-chuan.liao@linux.intel.com>
 Link: https://patch.msgid.link/20260326075303.1083567-3-yung-chuan.liao@linux.intel.com
 Signed-off-by: Mark Brown <broonie@kernel.org>
+(cherry picked from commit dd4a1963ddf0d0f5e129efec03f34ea37109b4b7)
 ---
  include/sound/soc_sdw_utils.h |  2 ++
  sound/soc/sof/intel/hda.c     | 10 ++++++++++
  2 files changed, 12 insertions(+)
 
 diff --git a/include/sound/soc_sdw_utils.h b/include/sound/soc_sdw_utils.h
-index 227347c8f..6726c63ad 100644
+index 227347c8f0b3..6726c63ad50c 100644
 --- a/include/sound/soc_sdw_utils.h
 +++ b/include/sound/soc_sdw_utils.h
 @@ -82,6 +82,8 @@ struct asoc_sdw_codec_info {
@@ -36,7 +37,7 @@ index 227347c8f..6726c63ad 100644
  	int (*codec_card_late_probe)(struct snd_soc_card *card);
  
 diff --git a/sound/soc/sof/intel/hda.c b/sound/soc/sof/intel/hda.c
-index 5fa773bb2..a1a723c47 100644
+index 5fa773bb2678..a1a723c47129 100644
 --- a/sound/soc/sof/intel/hda.c
 +++ b/sound/soc/sof/intel/hda.c
 @@ -1227,6 +1227,16 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,

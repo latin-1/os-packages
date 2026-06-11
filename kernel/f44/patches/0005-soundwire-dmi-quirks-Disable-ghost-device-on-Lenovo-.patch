@@ -1,0 +1,37 @@
+From 9f600ebcf592434a8c52ab8ae7ea8f17a853e440 Mon Sep 17 00:00:00 2001
+From: Charles Keepax <ckeepax@opensource.cirrus.com>
+Date: Mon, 8 Jun 2026 16:42:32 +0100
+Subject: [PATCH 05/11] soundwire: dmi-quirks: Disable ghost device on Lenovo
+ Yoga 9i
+
+There is also a "non-pro" version of the Lenovo Yoga 9i (83SE) which
+also needs a quirk to disable a non-existent Realtek device. Add this
+missing quirk.
+
+Co-developed-by: Julian Haarmann <julian.haarmann@student.kit.edu>
+Signed-off-by: Charles Keepax <ckeepax@opensource.cirrus.com>
+---
+ drivers/soundwire/dmi-quirks.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/drivers/soundwire/dmi-quirks.c b/drivers/soundwire/dmi-quirks.c
+index 32a46a2d90f7..c7e50873c873 100644
+--- a/drivers/soundwire/dmi-quirks.c
++++ b/drivers/soundwire/dmi-quirks.c
+@@ -192,6 +192,13 @@ static const struct dmi_system_id adr_remap_quirk_table[] = {
+ 		},
+ 		.driver_data = (void *)ghost_realtek,
+ 	},
++	{
++		.matches = {
++			DMI_MATCH(DMI_SYS_VENDOR, "LENOVO"),
++			DMI_MATCH(DMI_PRODUCT_NAME, "83SE"),
++		},
++		.driver_data = (void *)ghost_realtek,
++	},
+ 	{
+ 		.matches = {
+ 			DMI_MATCH(DMI_SYS_VENDOR, "LENOVO"),
+-- 
+2.54.0
+

@@ -1,7 +1,7 @@
-From 331c136b9d894bc6bb857738a5e316f8132e92c9 Mon Sep 17 00:00:00 2001
+From 2dceb63d5e843ea566d4d2208c7ba197057286b7 Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Fri, 15 May 2026 16:30:43 +0800
-Subject: [PATCH 7/7] ASoC: Intel: sof_sdw: append dai type to dai link name
+Subject: [PATCH 11/11] ASoC: Intel: sof_sdw: append dai type to dai link name
  unconditionally
 
 The dai_type is used to select function topologies. Since the topology
@@ -12,12 +12,15 @@ without breaking existing topologies.
 Signed-off-by: Bard Liao <yung-chuan.liao@linux.intel.com>
 Reviewed-by: Kai Vehmanen <kai.vehmanen@linux.intel.com>
 Reviewed-by: Liam Girdwood <liam.r.girdwood@intel.com>
+Link: https://patch.msgid.link/20260515083043.1864426-1-yung-chuan.liao@linux.intel.com
+Signed-off-by: Mark Brown <broonie@kernel.org>
+(cherry picked from commit c84179a1d36bebe99d9694502737ae9f3a90d2bc)
 ---
  sound/soc/intel/boards/sof_sdw.c | 23 ++++++++++++-----------
  1 file changed, 12 insertions(+), 11 deletions(-)
 
 diff --git a/sound/soc/intel/boards/sof_sdw.c b/sound/soc/intel/boards/sof_sdw.c
-index c18ec607e..5c4682f9f 100644
+index c18ec607e029..5c4682f9f7c9 100644
 --- a/sound/soc/intel/boards/sof_sdw.c
 +++ b/sound/soc/intel/boards/sof_sdw.c
 @@ -901,10 +901,16 @@ static int create_sdw_dailink(struct snd_soc_card *card,

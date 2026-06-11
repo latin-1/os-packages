@@ -1,0 +1,87 @@
+From 38b4ec41e53fa048cbe0b6d7705031f1137c06c5 Mon Sep 17 00:00:00 2001
+From: Charles Keepax <ckeepax@opensource.cirrus.com>
+Date: Mon, 1 Jun 2026 16:39:25 +0100
+Subject: [PATCH 06/11] soundwire: dmi-quirks: Disable extra device for Lenovo
+ Yoga 9i
+
+The Lenovo Yoga Pro 9i (83SF) and Lenovo Yoga 9i (83SE) also
+seem to contain an odd corrupt SoundWire device in the ACPI. It
+doesn't seem to have a valid manufacturer ID although the part
+ID does match the Intel manufacturer ID, suggesting it is a
+corruption of something valid. The system seems to work with it
+disabled and not with it included, so add an additional entry
+to the quirk to disable this device.
+
+It doesn't seem worth breaking this out into a separate quirk
+table specifically for this product, as the device doesn't contain
+a valid ADR. Just add the device to the existing list of devices
+to be ignored and rename that table to be slightly more generic.
+
+Signed-off-by: Charles Keepax <ckeepax@opensource.cirrus.com>
+---
+ drivers/soundwire/dmi-quirks.c | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+
+diff --git a/drivers/soundwire/dmi-quirks.c b/drivers/soundwire/dmi-quirks.c
+index c7e50873c873..7fc9aad4544f 100644
+--- a/drivers/soundwire/dmi-quirks.c
++++ b/drivers/soundwire/dmi-quirks.c
+@@ -91,15 +91,20 @@ static const struct adr_remap intel_rooks_county[] = {
+ };
+ 
+ /*
+- * Many platforms have ghost realtek devices in the ACPI that don't physically
++ * Many platforms have ghost devices in the ACPI that don't physically
+  * exist, remove those devices.
+  */
+-static const struct adr_remap ghost_realtek[] = {
++static const struct adr_remap ghost_device[] = {
+ 	/* rt722 on link3 */
+ 	{
+ 		0x000330025d072201ull,
+ 		0x0000000000000000ull
+ 	},
++	/* Unknown maybe corrupt device on link 0 */
++	{
++		0x000000D011010500ull,
++		0x0000000000000000ull
++	},
+ 	{}
+ };
+ 
+@@ -183,28 +188,28 @@ static const struct dmi_system_id adr_remap_quirk_table[] = {
+ 			DMI_MATCH(DMI_SYS_VENDOR, "ASUS"),
+ 			DMI_MATCH(DMI_BOARD_NAME, "UX5406AA"),
+ 		},
+-		.driver_data = (void *)ghost_realtek,
++		.driver_data = (void *)ghost_device,
+ 	},
+ 	{
+ 		.matches = {
+ 			DMI_MATCH(DMI_SYS_VENDOR, "LENOVO"),
+ 			DMI_MATCH(DMI_PRODUCT_NAME, "83QK"),
+ 		},
+-		.driver_data = (void *)ghost_realtek,
++		.driver_data = (void *)ghost_device,
+ 	},
+ 	{
+ 		.matches = {
+ 			DMI_MATCH(DMI_SYS_VENDOR, "LENOVO"),
+ 			DMI_MATCH(DMI_PRODUCT_NAME, "83SE"),
+ 		},
+-		.driver_data = (void *)ghost_realtek,
++		.driver_data = (void *)ghost_device,
+ 	},
+ 	{
+ 		.matches = {
+ 			DMI_MATCH(DMI_SYS_VENDOR, "LENOVO"),
+ 			DMI_MATCH(DMI_PRODUCT_NAME, "83SF"),
+ 		},
+-		.driver_data = (void *)ghost_realtek,
++		.driver_data = (void *)ghost_device,
+ 	},
+ 	{}
+ };
+-- 
+2.54.0
+
