@@ -1,7 +1,7 @@
-From 0b2a3af7126e5581c5a9591db77f8a9fb68b9883 Mon Sep 17 00:00:00 2001
+From 658d2c7995d878bba94b853674e19d4dcbddd08b Mon Sep 17 00:00:00 2001
 From: Derek Fang <derek.fang@realtek.com>
 Date: Thu, 26 Mar 2026 15:53:02 +0800
-Subject: [PATCH 07/10] ASoC: sdw_utils: add rt1320 and rt1321 dmic dai in
+Subject: [PATCH 5/8] ASoC: sdw_utils: add rt1320 and rt1321 dmic dai in
  codec_info_list
 
 Add 'rt1320-aif2' dai infos for rt1320 and rt1321 dmic function.

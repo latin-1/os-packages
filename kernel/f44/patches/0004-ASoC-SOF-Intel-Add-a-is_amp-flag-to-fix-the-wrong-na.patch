@@ -1,8 +1,8 @@
-From eb7ed749bb5a7ddf0b6d65780f552a3ae17f3c4c Mon Sep 17 00:00:00 2001
+From c254b8507f7d45fc8f034931076ef105b7592941 Mon Sep 17 00:00:00 2001
 From: Derek Fang <derek.fang@realtek.com>
 Date: Thu, 26 Mar 2026 15:53:01 +0800
-Subject: [PATCH 06/10] ASoC: SOF: Intel: Add a is_amp flag to fix the wrong
- name prefix
+Subject: [PATCH 4/8] ASoC: SOF: Intel: Add a is_amp flag to fix the wrong name
+ prefix
 
 According to the Intel sof design, it will create the name prefix
 appended with amp index for the amp codec only, such as:

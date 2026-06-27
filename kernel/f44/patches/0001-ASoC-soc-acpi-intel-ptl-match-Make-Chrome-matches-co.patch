@@ -1,7 +1,7 @@
 From 13621d9aefd3f4252a268f8172ac2a679ac9515a Mon Sep 17 00:00:00 2001
 From: Charles Keepax <ckeepax@opensource.cirrus.com>
 Date: Wed, 20 May 2026 17:36:29 +0100
-Subject: [PATCH 01/10] ASoC: soc-acpi-intel-ptl-match: Make Chrome matches
+Subject: [PATCH 1/8] ASoC: soc-acpi-intel-ptl-match: Make Chrome matches
  conditional
 
 For PTL onwards Cirrus are intending to rely on function
