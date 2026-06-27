@@ -1,7 +1,7 @@
-From 2dceb63d5e843ea566d4d2208c7ba197057286b7 Mon Sep 17 00:00:00 2001
+From 85aa4a4866c862104d2498a1b163f334029285a0 Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Fri, 15 May 2026 16:30:43 +0800
-Subject: [PATCH 11/11] ASoC: Intel: sof_sdw: append dai type to dai link name
+Subject: [PATCH 10/10] ASoC: Intel: sof_sdw: append dai type to dai link name
  unconditionally
 
 The dai_type is used to select function topologies. Since the topology

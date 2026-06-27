@@ -1,7 +1,7 @@
-From 2c1f123f5bb19b974272076d8599c52002584965 Mon Sep 17 00:00:00 2001
+From eb7ed749bb5a7ddf0b6d65780f552a3ae17f3c4c Mon Sep 17 00:00:00 2001
 From: Derek Fang <derek.fang@realtek.com>
 Date: Thu, 26 Mar 2026 15:53:01 +0800
-Subject: [PATCH 07/11] ASoC: SOF: Intel: Add a is_amp flag to fix the wrong
+Subject: [PATCH 06/10] ASoC: SOF: Intel: Add a is_amp flag to fix the wrong
  name prefix
 
 According to the Intel sof design, it will create the name prefix

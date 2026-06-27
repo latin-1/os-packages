@@ -1,7 +1,7 @@
-From 9f600ebcf592434a8c52ab8ae7ea8f17a853e440 Mon Sep 17 00:00:00 2001
+From dc3f83c9218f2f0758cb6b16f31ac3e8abf7b42a Mon Sep 17 00:00:00 2001
 From: Charles Keepax <ckeepax@opensource.cirrus.com>
 Date: Mon, 8 Jun 2026 16:42:32 +0100
-Subject: [PATCH 05/11] soundwire: dmi-quirks: Disable ghost device on Lenovo
+Subject: [PATCH 04/10] soundwire: dmi-quirks: Disable ghost device on Lenovo
  Yoga 9i
 
 There is also a "non-pro" version of the Lenovo Yoga 9i (83SE) which

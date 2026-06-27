@@ -1,7 +1,7 @@
-From 38b4ec41e53fa048cbe0b6d7705031f1137c06c5 Mon Sep 17 00:00:00 2001
+From a67f9d0ca22cc8cf62a9c5f233821c4c667da940 Mon Sep 17 00:00:00 2001
 From: Charles Keepax <ckeepax@opensource.cirrus.com>
 Date: Mon, 1 Jun 2026 16:39:25 +0100
-Subject: [PATCH 06/11] soundwire: dmi-quirks: Disable extra device for Lenovo
+Subject: [PATCH 05/10] soundwire: dmi-quirks: Disable extra device for Lenovo
  Yoga 9i
 
 The Lenovo Yoga Pro 9i (83SF) and Lenovo Yoga 9i (83SE) also

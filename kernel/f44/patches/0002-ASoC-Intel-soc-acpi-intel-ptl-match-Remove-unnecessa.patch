@@ -1,7 +1,7 @@
-From 272b375e5e28c5432a3f5383056fdda2f86712d8 Mon Sep 17 00:00:00 2001
+From ece81517ddeec0c0d9c8c658c95b92851daa45f8 Mon Sep 17 00:00:00 2001
 From: Charles Keepax <ckeepax@opensource.cirrus.com>
 Date: Wed, 20 May 2026 17:36:30 +0100
-Subject: [PATCH 03/11] ASoC: Intel: soc-acpi-intel-ptl-match: Remove
+Subject: [PATCH 02/10] ASoC: Intel: soc-acpi-intel-ptl-match: Remove
  unnecessary cs42l43 match
 
 For PTL onwards Cirrus are intending to rely on function topologies,
