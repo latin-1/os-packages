@@ -1,4 +1,4 @@
-From ece81517ddeec0c0d9c8c658c95b92851daa45f8 Mon Sep 17 00:00:00 2001
+From 473d89ace716c2836bbb22fba6d323dce0fa78c9 Mon Sep 17 00:00:00 2001
 From: Charles Keepax <ckeepax@opensource.cirrus.com>
 Date: Wed, 20 May 2026 17:36:30 +0100
 Subject: [PATCH 2/8] ASoC: Intel: soc-acpi-intel-ptl-match: Remove unnecessary

@@ -1,4 +1,4 @@
-From d0e32f9f780b48bdecdae7142ef562c1c38f1586 Mon Sep 17 00:00:00 2001
+From efee8a051eeb4fcb08401b7e62a7c7e7c3bd17ce Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Fri, 5 Jun 2026 18:18:04 +0800
 Subject: [PATCH 6/8] ASoC: soc_sdw_utils: add is_amp flag to all amps

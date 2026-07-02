@@ -1,4 +1,4 @@
-From 1d9ff0a5f656f674ffb5f9bda051949fec601dcc Mon Sep 17 00:00:00 2001
+From 68cf6dbcb6cd0a55a6b917365d656e3f351d892e Mon Sep 17 00:00:00 2001
 From: Charles Keepax <ckeepax@opensource.cirrus.com>
 Date: Wed, 20 May 2026 17:36:31 +0100
 Subject: [PATCH 3/8] soundwire: dmi-quirks: Disable ghost Realtek devices

@@ -1,4 +1,4 @@
-From 658d2c7995d878bba94b853674e19d4dcbddd08b Mon Sep 17 00:00:00 2001
+From 09f0ff426116940c62414acfc7aa3e68b21f84e1 Mon Sep 17 00:00:00 2001
 From: Derek Fang <derek.fang@realtek.com>
 Date: Thu, 26 Mar 2026 15:53:02 +0800
 Subject: [PATCH 5/8] ASoC: sdw_utils: add rt1320 and rt1321 dmic dai in

@@ -1,4 +1,4 @@
-From c254b8507f7d45fc8f034931076ef105b7592941 Mon Sep 17 00:00:00 2001
+From 440de39a40f449568079a42bb78757bb494d552a Mon Sep 17 00:00:00 2001
 From: Derek Fang <derek.fang@realtek.com>
 Date: Thu, 26 Mar 2026 15:53:01 +0800
 Subject: [PATCH 4/8] ASoC: SOF: Intel: Add a is_amp flag to fix the wrong name
