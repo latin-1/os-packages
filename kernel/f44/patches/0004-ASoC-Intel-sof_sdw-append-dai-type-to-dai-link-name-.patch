@@ -1,7 +1,7 @@
-From 3914cf2948bf3a83a3d6474f0810abc21e57331e Mon Sep 17 00:00:00 2001
+From a3da962d42e8152a48cc6d7f623316ba700d4dcf Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Fri, 15 May 2026 16:30:43 +0800
-Subject: [PATCH 8/8] ASoC: Intel: sof_sdw: append dai type to dai link name
+Subject: [PATCH 4/4] ASoC: Intel: sof_sdw: append dai type to dai link name
  unconditionally
 
 The dai_type is used to select function topologies. Since the topology
@@ -20,10 +20,10 @@ Signed-off-by: Mark Brown <broonie@kernel.org>
  1 file changed, 12 insertions(+), 11 deletions(-)
 
 diff --git a/sound/soc/intel/boards/sof_sdw.c b/sound/soc/intel/boards/sof_sdw.c
-index c18ec607e029..5c4682f9f7c9 100644
+index ce7718338e6b..d43daf9b025d 100644
 --- a/sound/soc/intel/boards/sof_sdw.c
 +++ b/sound/soc/intel/boards/sof_sdw.c
-@@ -901,10 +901,16 @@ static int create_sdw_dailink(struct snd_soc_card *card,
+@@ -909,10 +909,16 @@ static int create_sdw_dailink(struct snd_soc_card *card,
  		}
  	}
  
@@ -42,7 +42,7 @@ index c18ec607e029..5c4682f9f7c9 100644
  			"SDW%d-Playback-%s",
  			"SDW%d-Capture-%s",
  		};
-@@ -932,15 +938,10 @@ static int create_sdw_dailink(struct snd_soc_card *card,
+@@ -940,15 +946,10 @@ static int create_sdw_dailink(struct snd_soc_card *card,
  		}
  
  		/* create stream name according to first link id */
@@ -63,5 +63,5 @@ index c18ec607e029..5c4682f9f7c9 100644
  			return -ENOMEM;
  
 -- 
-2.54.0
+2.55.0
 

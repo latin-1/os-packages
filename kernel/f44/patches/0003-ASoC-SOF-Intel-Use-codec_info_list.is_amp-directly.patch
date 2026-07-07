@@ -1,7 +1,7 @@
-From c454f939765bc605994cce87cd185fd6ce7dcc75 Mon Sep 17 00:00:00 2001
+From 28f53113abe3ec9fe9a1a9ab1ebd93bc4340d4eb Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Fri, 5 Jun 2026 18:18:05 +0800
-Subject: [PATCH 7/8] ASoC: SOF: Intel: Use codec_info_list.is_amp directly
+Subject: [PATCH 3/4] ASoC: SOF: Intel: Use codec_info_list.is_amp directly
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -20,7 +20,7 @@ Signed-off-by: Mark Brown <broonie@kernel.org>
  1 file changed, 1 insertion(+), 13 deletions(-)
 
 diff --git a/sound/soc/sof/intel/hda.c b/sound/soc/sof/intel/hda.c
-index a1a723c47129..46a6c63fc7c9 100644
+index 8662b422eb80..dc85903b8d46 100644
 --- a/sound/soc/sof/intel/hda.c
 +++ b/sound/soc/sof/intel/hda.c
 @@ -1159,7 +1159,6 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
@@ -31,7 +31,7 @@ index a1a723c47129..46a6c63fc7c9 100644
  	int ep_index = 0;
  	int i, j;
  
-@@ -1213,7 +1212,6 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
+@@ -1216,7 +1215,6 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
  				endpoints[ep_index].aggregated = 0;
  				endpoints[ep_index].group_id = 0;
  				endpoints[ep_index].group_position = 0;
@@ -39,7 +39,7 @@ index a1a723c47129..46a6c63fc7c9 100644
  			}
  			ep_index++;
  		}
-@@ -1227,16 +1225,6 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
+@@ -1230,16 +1228,6 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
  		return NULL;
  	}
  
@@ -56,7 +56,7 @@ index a1a723c47129..46a6c63fc7c9 100644
  	adr_dev[index].adr = ((u64)sdw_device->id.class_id & 0xFF) |
  			((u64)sdw_device->id.part_id & 0xFFFF) << 8 |
  			((u64)sdw_device->id.mfg_id & 0xFFFF) << 24 |
-@@ -1244,7 +1232,7 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
+@@ -1247,7 +1235,7 @@ static struct snd_soc_acpi_adr_device *find_acpi_adr_device(struct device *dev,
  			((u64)(sdw_device->id.sdw_version & 0xF) << 44) |
  			((u64)(sdw_device->bus->link_id & 0xF) << 48);
  
@@ -66,5 +66,5 @@ index a1a723c47129..46a6c63fc7c9 100644
  		adr_dev[index].name_prefix = devm_kasprintf(dev, GFP_KERNEL, "%s", name_prefix);
  		goto done_name_prefix;
 -- 
-2.54.0
+2.55.0
 
