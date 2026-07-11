@@ -1,7 +1,7 @@
 From fae51125fc701297079f5673f90dc43e876e2f79 Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Fri, 5 Jun 2026 18:18:04 +0800
-Subject: [PATCH 2/4] ASoC: soc_sdw_utils: add is_amp flag to all amps
+Subject: [PATCH 2/5] ASoC: soc_sdw_utils: add is_amp flag to all amps
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

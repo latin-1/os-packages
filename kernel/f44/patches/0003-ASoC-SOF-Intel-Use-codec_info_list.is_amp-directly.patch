@@ -1,7 +1,7 @@
 From 28f53113abe3ec9fe9a1a9ab1ebd93bc4340d4eb Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Fri, 5 Jun 2026 18:18:05 +0800
-Subject: [PATCH 3/4] ASoC: SOF: Intel: Use codec_info_list.is_amp directly
+Subject: [PATCH 3/5] ASoC: SOF: Intel: Use codec_info_list.is_amp directly
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
