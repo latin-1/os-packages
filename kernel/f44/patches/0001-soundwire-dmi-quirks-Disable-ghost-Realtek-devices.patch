@@ -1,7 +1,7 @@
 From d71e6d455b623c5513e4cc24dfd4eddbc5dd3599 Mon Sep 17 00:00:00 2001
 From: Charles Keepax <ckeepax@opensource.cirrus.com>
 Date: Wed, 20 May 2026 17:36:31 +0100
-Subject: [PATCH 1/5] soundwire: dmi-quirks: Disable ghost Realtek devices
+Subject: [PATCH 1/4] soundwire: dmi-quirks: Disable ghost Realtek devices
 
 Many systems ship with a Realtek audio codec in the ACPI that doesn't
 physically exist in the system. This confuses the newer function
