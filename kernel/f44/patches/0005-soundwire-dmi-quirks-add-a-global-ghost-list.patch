@@ -1,4 +1,4 @@
-From a7716bb41598b3671da94181eae8b76263e27642 Mon Sep 17 00:00:00 2001
+From 4c03f4650b753e61e772b3cf137c0e11fb81afea Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Fri, 3 Jul 2026 09:16:56 +0800
 Subject: [PATCH 5/5] soundwire: dmi-quirks: add a global ghost list

@@ -1,4 +1,4 @@
-From d7def154149635c2e529a961d5822e3cd4bbc1e0 Mon Sep 17 00:00:00 2001
+From 4e79f0fd070230bc883d8ac5491bc137dbd35bcf Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Fri, 15 May 2026 16:30:43 +0800
 Subject: [PATCH 1/5] ASoC: Intel: sof_sdw: append dai type to dai link name
