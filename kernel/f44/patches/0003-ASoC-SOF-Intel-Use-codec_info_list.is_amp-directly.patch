@@ -1,4 +1,4 @@
-From a62faedfae06accfcdfd15667260e662d5f03419 Mon Sep 17 00:00:00 2001
+From 87545232f1bfca7a7c23aab030d79b79c4ab9ddc Mon Sep 17 00:00:00 2001
 From: Bard Liao <yung-chuan.liao@linux.intel.com>
 Date: Fri, 5 Jun 2026 18:18:05 +0800
 Subject: [PATCH 3/5] ASoC: SOF: Intel: Use codec_info_list.is_amp directly
